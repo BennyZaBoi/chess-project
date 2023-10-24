@@ -19,8 +19,8 @@
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you?
 >   * This project (Chess) is crucial to us since it allows us to apply various design patterns and chess solution algorithms that we had never worked with before.
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- > * For the input, this game will take in the coordinate of a chess piece. If it is a valid spot for the chess piece to move, then the output would be the new location of such chess piece. Of course, if not, the user will have to keep putting in coordinates until they choose a valid position. 
+ > * We plan to use C++ and SDL2 as our interface for our chessboard.
+ > * For the input, this game will take in the coordinates of a chess piece. If it is a valid spot for the chess piece to move, then the output would be the new location of such chess piece. Of course, if not, the user will have to keep putting in coordinates until they choose a valid position. 
  > * The chess game will allow for two users to play against each other. Users will have the ability to undo their moves, as well as to save, load, and continue their incomplete games.
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 

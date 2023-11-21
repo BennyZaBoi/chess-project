@@ -33,7 +33,7 @@ TEST(PawnDownwardsMovementTests, moveDiagonalRight){
     EXPECT_TRUE(myPawn->moveValid(7,5));
 }
 
-TEST(PawGeneralMovementTests, movesOffBoard){
+TEST(PawnGeneralMovementTests, movesOffBoard){
     Pawn* myPawn = new Pawn(black, 7, 7, true);
     EXPECT_FALSE(myPawn->moveValid(8,8));
 }

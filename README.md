@@ -1,4 +1,4 @@
-![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/c997404e-5432-4da9-9e85-4ef502b480f0) # Chess Game
+# Chess Game
  
 Authors: Hien Bui (https://github.com/hbgithubucr), Luis Barrios (https://github.com/LuisBrios), Ben Pham (https://github.com/BennyZaBoi), and Alex Zhang (https://github.com/sAwesomedragon)
 

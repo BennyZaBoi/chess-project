@@ -3,37 +3,30 @@
 Pawn::Pawn(Color _color, int _row, int _column, bool _movesUp) : SpecialPiece(_color, Pn, _row, _column), movesUp(_movesUp){};
 
 const bool Pawn::moveValid(int newRow, int newColumn){//, Chessboard* board){
-    //checks if new position is on the board
-    if(newRow < 0 || newRow > 7 || newColumn < 0 || newColumn > 7){
-        return false;
-    }
-    //makes sure pawn is not moving sideways
-    if(newColumn != column){
-        return false;
-    }
-    int rowMovement = (newRow - row);
-    //makes sure pawn is moving in the correct direction
-    if(movesUp){
-        if(rowMovement > 0)
-        {
-            return false;
+    // checks if new postion is on the board and that the pawn is not staying on the spot
+    if (onBoard(newRow, newColumn) && isMoving(newRow, newColumn)){
+        int direction = 0;
+        if(movesUp){
+            direction = -1;
+        }
+        else{
+            direction = 1;
+        }
+        int rowMovement = (newRow - row);
+        int columnMovement = (newColumn - column);
+        // checks if pawn is moving the correct direction
+        if((rowMovement * direction) > 0){
+            rowMovement = abs(rowMovement);
+            if(rowMovement == 1 && columnMovement == 0 ){// && spot is not occupied){
+                return true;
+            }
+            else if(rowMovement == 1 && columnMovement == 1){// && spot is occupied by enemy
+                return true;
+            }
+            else if(rowMovement == 1 && columnMovement == -1){// spot is occupied by enemy
+                return true;
+            }
         }
     }
-    else
-    {
-        if(rowMovement < 0)
-        {
-            return false;
-        }
-    }
-    //checks to make sure it at max moved 2 squares
-    if(abs(rowMovement) > 2){
-        return false;
-    }
-    //checks to make sure that if it is moving 2 squares that it also has not moved yet
-    if(moved && abs(rowMovement) > 1)
-    {
-        return false;
-    }
-    return true;
+    return false;
 }

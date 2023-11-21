@@ -12,30 +12,32 @@ TEST(KingCapturedTests, setsCaptured){
     EXPECT_TRUE(myKing->isCaptured());
 }
 
-TEST(KingMovementTests, kingMovesOffBoard){
+TEST(KingMovementTests, offBoard){
     King* myKing = new King(black, 7, 7);
     EXPECT_FALSE(myKing->moveValid(8,8));
 }
 
-TEST(KingMovementTests, ForwardAndBackKingMoves){
+TEST(KingMovementTests, verticalMovement){
     King* myKing = new King(black, 6, 6);
     EXPECT_TRUE(myKing->moveValid(5,6));
     EXPECT_TRUE(myKing->moveValid(7,6));
 }
 
-TEST(KingMovementTests, SidewaysKingMoves){
+TEST(KingMovementTests, horizonalMovement){
     King* myKing = new King(black, 6, 6);
     EXPECT_TRUE(myKing->moveValid(6,5));
     EXPECT_TRUE(myKing->moveValid(6,7));
 }
 
-TEST(KingMovementTests, DiagonalKingMoves){
+TEST(KingMovementTests, diagonalMovement){
     King* myKing = new King(black, 6, 6);
     EXPECT_TRUE(myKing->moveValid(7,7));
     EXPECT_TRUE(myKing->moveValid(5,5));
+    EXPECT_TRUE(myKing->moveValid(7,5));
+    EXPECT_TRUE(myKing->moveValid(5,7));
 }
 
-TEST(KingMovementTests, InvalidKingMoves){
+TEST(KingMovementTests, invalidMovement){
     King* myKing = new King(black, 6, 6);
     EXPECT_FALSE(myKing->moveValid(4,6));
     EXPECT_FALSE(myKing->moveValid(6,4));

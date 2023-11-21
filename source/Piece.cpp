@@ -26,3 +26,11 @@ const int Piece::getRow(){
 const int Piece::getColumn(){
     return column;
 }
+
+const bool Piece::onBoard(int _row, int _column){
+    return (_row >= 0 && _row <= 7 && _column >= 0 && _column <= 7);
+}
+
+const bool Piece::isMoving(int _row, int _column){
+    return (_row != row || _column != column);
+}

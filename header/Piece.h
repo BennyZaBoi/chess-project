@@ -25,6 +25,8 @@ class Piece{
         const Type getType();
         const int getRow();
         const int getColumn();
+        const bool onBoard(int, int);
+        const bool isMoving(int, int);
         virtual const bool moveValid(int, int) = 0;//, Chessboard*) = 0;
 };
 

@@ -3,7 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runAllTests
-    tests/allPnKgTests.cpp
+    tests/allTests.cpp
     source/Piece.cpp
     source/SpecialPiece.cpp
     source/Pawn.cpp

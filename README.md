@@ -1,4 +1,4 @@
- # Chess Game
+![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/c997404e-5432-4da9-9e85-4ef502b480f0) # Chess Game
  
 Authors: Hien Bui (https://github.com/hbgithubucr), Luis Barrios (https://github.com/LuisBrios), Ben Pham (https://github.com/BennyZaBoi), and Alex Zhang (https://github.com/sAwesomedragon)
 
@@ -25,6 +25,7 @@ End Screen: For this part, once the chess game ends (by classic rules), we plan 
 
 ## Class Diagram
 ![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/05ef4b73-be82-4d3d-8918-5e71a3d580fc)
+![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/e51561e5-0abc-4924-a5f9-12dc34446c07)
 
 Piece class: abstract class that is the parent of all the other classes for the different pieces and contains information that all pieces will need.
 

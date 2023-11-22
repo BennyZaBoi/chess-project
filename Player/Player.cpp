@@ -2,7 +2,7 @@
 
 Player::Player(): name(""), firstMove(true), colorChoice('w') {}
 
-Player::Player(const string playername): name(playername), firstMove(true), colorChoice('w') {}
+Player::Player(const string& playername): name(playername), firstMove(true), colorChoice('w') {}
 
 void Player::setName(string newname) {
     name = newname;

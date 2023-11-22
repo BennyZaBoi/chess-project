@@ -4,6 +4,7 @@
 #include "kingTests.h"
 #include "pawnTests.h"
 #include "KnightTests.h"
+#include "PlayerTests.h"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

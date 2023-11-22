@@ -1,4 +1,4 @@
-#include "Player.h"
+#include "../header/Player.h"
 
 Player::Player(): name(""), firstMove(true), playColor(white) {}
 

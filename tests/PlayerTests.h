@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../Player/Player.cpp"
+#include "../source/Player.cpp"
 
 TEST(PlayerTests, defaultConstructorTest) {
     Player p1;
@@ -20,9 +20,4 @@ TEST(PlayerTests, boolConstructorTest) {
     EXPECT_EQ("", p1.returnName());
     EXPECT_FALSE(p1.returnFirstMove() == 1);
     EXPECT_EQ(white, p1.returnColorChoice());
-}
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 }

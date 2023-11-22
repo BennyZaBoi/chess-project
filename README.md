@@ -76,7 +76,8 @@ Update 2
 
 * How did you apply it? Made Game class into GameManager and GameController classes. GameManager class handles storing and setting different parts of the game. GameController class handles how the overall game works and runs.
 
-* How did this change help you write better code?
+* How did this change help you write better code? We refactored the original Game class into two independent classes using the Single Responsibility Principle: GameManager and GameController. The GameManager is now solely responsible for the storage and manipulation of various game components, while the GameController is in charge of the overall flow and execution of the game. 
+
 
 Update 3
 

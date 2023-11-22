@@ -19,9 +19,9 @@ class Player{
         void setFirstMove(bool tf);
         void setColorChoice(char z);
 
-        string returnName();
-        int returnFirstMove();
-        char returnColorChoice();
+        string returnName() const;
+        int returnFirstMove() const;
+        char returnColorChoice() const;
 };
 
 #endif 

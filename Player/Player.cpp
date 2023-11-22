@@ -16,17 +16,17 @@ void Player::setColorChoice(char z) {
     colorChoice = z;
 }
 
-string Player::returnName() {
+string Player::returnName() const {
     return name;
 }
 
-int Player::returnFirstMove() {
+int Player::returnFirstMove() const {
     if (firstMove == true) {
         return true;
     }
     return false;
 }
 
-char Player::returnColorChoice() {
+char Player::returnColorChoice() const {
     return colorChoice;
 }

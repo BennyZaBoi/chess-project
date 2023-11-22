@@ -12,3 +12,10 @@ ADD_EXECUTABLE(runAllTests
 
 TARGET_LINK_LIBRARIES(runAllTests gtest)
 TARGET_COMPILE_DEFINITIONS(runAllTests PRIVATE gtest_disable_pthreads=ON)
+
+ADD_EXECUTABLE(runPlayerTests
+    tests/PlayerTests.cpp
+)
+
+TARGET_LINK_LIBRARIES(runPlayerTests gtest)
+TARGET_COMPILE_DEFINITIONS(runPlayerTests PRIVATE gtest_disable_pthreads=ON)

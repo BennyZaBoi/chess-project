@@ -2,6 +2,7 @@
 #define __PLAYER_H__
 
 #include <string>
+#include "../header/Color.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ class Player{
     private: 
         string name;
         bool firstMove;
-        char colorChoice;
+        enum Color playColor;
     
     public:
         Player();
@@ -17,7 +18,7 @@ class Player{
 
         void setName(string newname);
         void setFirstMove(bool tf);
-        void setColorChoice(char z);
+        void setColorChoice(Color c);
 
         string returnName() const;
         int returnFirstMove() const;

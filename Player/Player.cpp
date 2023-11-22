@@ -1,8 +1,8 @@
 #include "Player.h"
 
-Player::Player(): name(""), firstMove(true), colorChoice('w') {}
+Player::Player(): name(""), firstMove(true), playColor(white) {}
 
-Player::Player(const string& playername): name(playername), firstMove(true), colorChoice('w') {}
+Player::Player(const string& playername): name(playername), firstMove(true), playColor(white) {}
 
 void Player::setName(string newname) {
     name = newname;
@@ -12,8 +12,8 @@ void Player::setFirstMove(bool tf) {
     firstMove = tf;
 }
 
-void Player::setColorChoice(char z) {
-    colorChoice = z;
+void Player::setColorChoice(Color c) {
+    playColor = c;
 }
 
 string Player::returnName() const {
@@ -28,5 +28,5 @@ int Player::returnFirstMove() const {
 }
 
 char Player::returnColorChoice() const {
-    return colorChoice;
+    return playColor;
 }

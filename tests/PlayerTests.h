@@ -18,6 +18,6 @@ TEST(PlayerTests, nameConstructorTest) {
 TEST(PlayerTests, boolConstructorTest) {
     Player p1;
     EXPECT_EQ("", p1.returnName());
-    EXPECT_FALSE(p1.returnFirstMove() == 1);
+    EXPECT_FALSE(p1.returnFirstMove() == false);
     EXPECT_EQ(white, p1.returnColorChoice());
 }

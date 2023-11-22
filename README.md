@@ -18,14 +18,14 @@ This diagram is a really brief overview of our plans for our terminal-based ches
 The whole entire project we have outlined will, for now, be terminal-based. On the previous navigation diagram, we had only set up 3 screens, to which are respectively the opening screen, the main chess game, and the ennding screen.
  
 Opening Screen: At the beginning, once the code is run, the user will simply be greeted with a welcome page. All it would ask for is the user to press a specific key in order to get the game running. We have thoughts of more to implement for this page, but considering the complexity of chess by itself, we will keep it simple for now. If time allows, we plan to extend this page by prompting the user to press another specific key to get help with learning to play chess, and a third specific key to change settings for the game (such as adding a timer or not). We are establishing such a screen simply because it would look more proper (and might be more useful later on as we finish) to have an opening as opposed to simply being directed to the game.
+
 Main Screen: On this screen, we plan to just have the chess game going. It will be exactly the same as chess on a board (same rules, same pieces in their respected positions, etc). Obviously, as this will be on the terminal as opposed to having it displayed graphically, it will be a bit harder to manage an appealing look. We plan to have each square on the board represented by underscores and bars, and are considering just representing the pieces as two. As a finishing touch to the chess game, once you capture a piece, we will show the captured piece on your respective side, as some online chess boards do. We are considering having a timer on the side display as well, but for that to occur we plan to first get the rules and set up of the board done first before adding additional settings, as we understand not everyone plays with a timer anyway.
 (Pieces: King - Kg, Queen - Qn, Rook - Rk, Knight - Kn, Bishop - Bp, Pawn - Pn)
 End Screen: For this part, once the chess game ends (by classic rules), we plan to simply just declare which player won in a simple outputted statement of "Black wins" or "White wins." 
 
 
 ## Class Diagram
-![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/05ef4b73-be82-4d3d-8918-5e71a3d580fc)
-![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/e51561e5-0abc-4924-a5f9-12dc34446c07)
+![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/5a36b92e-b5a3-41e5-848f-323277e6fc50)
 
 Piece class: abstract class that is the parent of all the other classes for the different pieces and contains information that all pieces will need.
 
@@ -37,13 +37,45 @@ King class: Same as previous, but also has the boolean "check" member variable a
 
 Square class: Object which stores its location and a Piece. Is used to build up the Chessboard class.
 
-Chessboard class: Contains each of the Squares of the board, and can check whether a particular movement path is clear. Addiitonally can output the board and pieces to the terminal.
+Chessboard class: Contains each of the Squares of the board, and can check whether a particular movement path is clear. 
+
+ChessboardDisplay class : Output the board and pieces to the terminal.
 
 Move class: Used in order to store the initial and final information of a particular move so that we can undo the move if the user chooses to.
 
+Capture class : If a move captured an opponent's piece, also stores the captured piece
+
 Player class: Simply stores the uses' names and what color they are.
 
-Game class: Handles the bulk of the overall game, including beginning and ending the game, saving and laoding games, keeping track of the moves that have made, and getting actions from the user 
+GameManager class: Stores and maintains most of the different parts of the chess game.
+
+GameController class : Handles the bulk of how the game runs, including beginning and ending the game, saving and laoding games, keeping track of the moves that have made, and getting actions from the user
+
+## SOLID Class Diagram Updates
+
+Update 1
+
+* What SOLID principle(s) did you apply?
+
+* How did you apply it? Seperated displayBoard function form Chessboard and class and put it into its own ChessboardDisplay class.
+
+* How did this change help you write better code?
+
+Update 2
+
+* What SOLID principle(s) did you apply?
+
+* How did you apply it? Made Game class into GameManager and GameController classes. GameManager class handles storing and setting different parts of the game. GameController class handles how the overall game works and runs.
+
+* How did this change help you write better code?
+
+Update 3
+
+* What SOLID principle(s) did you apply?
+
+* How did you apply it? Seperated capturedPiece member variable and getCapturedPiece function from Move class and put them into their own Capture class.
+
+* How did this change help you write better code?
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.

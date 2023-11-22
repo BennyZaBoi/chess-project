@@ -64,7 +64,7 @@ GameController class : Handles the bulk of how the game runs, including beginnin
 
 Update 1
 
-* What SOLID principle(s) did you apply?
+* What SOLID principle(s) did you apply? Single Responsibility Principle.
 
 * How did you apply it? Seperated displayBoard function form Chessboard and class and put it into its own ChessboardDisplay class.
 
@@ -72,7 +72,7 @@ Update 1
 
 Update 2
 
-* What SOLID principle(s) did you apply?
+* What SOLID principle(s) did you apply? Single Responsibilty Principle.
 
 * How did you apply it? Made Game class into GameManager and GameController classes. GameManager class handles storing and setting different parts of the game. GameController class handles how the overall game works and runs.
 
@@ -80,7 +80,7 @@ Update 2
 
 Update 3
 
-* What SOLID principle(s) did you apply?
+* What SOLID principle(s) did you apply? Interface Segregation Principle.
 
 * How did you apply it? Seperated capturedPiece member variable and getCapturedPiece function from Move class and put them into their own Capture class.
 

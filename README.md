@@ -66,7 +66,7 @@ Update 1
 
 * What SOLID principle(s) did you apply? Single Responsibility Principle.
 
-* How did you apply it? Seperated displayBoard function form Chessboard and class and put it into its own ChessboardDisplay class.
+* How did you apply it? Separated displayBoard function from Chessboard and class and put it into its own ChessboardDisplay class.
 
 * How did this change help you write better code? Easier to distinguish what each board does, that way we won't get confused when we refer to a display class
 
@@ -82,12 +82,12 @@ Update 3
 
 * What SOLID principle(s) did you apply? Interface Segregation Principle.
 
-* How did you apply it? Seperated capturedPiece member variable and getCapturedPiece function from Move class and put them into their own Capture class.
+* How did you apply it? Separated capturedPiece member variable and getCapturedPiece function from Move class and put them into their own Capture class.
 
-* How did this change help you write better code?
+* How did this change help you write better code? Better organization so we can find where the captured pieces are easier.
  
  > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
+ > All group members will give a demo to the reader during lab time. You should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.

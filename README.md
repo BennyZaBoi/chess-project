@@ -68,7 +68,7 @@ Update 1
 
 * How did you apply it? Seperated displayBoard function form Chessboard and class and put it into its own ChessboardDisplay class.
 
-* How did this change help you write better code?
+* How did this change help you write better code? Easier to distinguish what each board does, that way we won't get confused when we refer to a display class
 
 Update 2
 

@@ -1,9 +1,5 @@
 #include squares.h
 
-Squares::Squares(){
-    Piece* piece = nullptr;    
-}
-
 ~Squares::Squares(){ 
     delete piece; 
 }
@@ -20,8 +16,8 @@ Piece* Squares::getPiece() const {
     return piece; 
 }
 
-Piece Squares::setPiece(Piece* piece){
-
+Piece Squares::setPiece(Piece* selectedPiece){
+    piece = selectedPiece;
 }
 
 bool Squares::isOccupied(){

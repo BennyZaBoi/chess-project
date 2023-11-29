@@ -6,10 +6,23 @@ class Squares {
         int column; 
         Piece* piece; 
     public:
-        Squares();
-        int getRow(); 
-        int getColumn(); 
-        Piece* getPiece(); 
+        Squares()
+            :row(-1),
+             column(-1),
+             piece(nullptr),
+            {
+            }
+
+        Squares(int row, int column, Piece* piece)
+            :row(row),
+             column(column), 
+             piece(piece)
+            {
+            }
+
+        int getRow() const; 
+        int getColumn() const; 
+        Piece* getPiece() const; 
         Piece setPiece(Piece* piece);
         bool isOccupied(); 
 }

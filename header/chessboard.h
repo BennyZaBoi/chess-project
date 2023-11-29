@@ -2,9 +2,9 @@
 
 class Chessboard{
     private: 
-        auto board = new Square*[8][8];
+        Square* board;
     public: 
+        Chessboard();
         bool pathClearStraight(Square* rowSqr, Square* clmnSqr);
         bool pathClearDiagonal(Square* rowSqr, Square* clmnSqr);
-        void displayBoard();  
 }

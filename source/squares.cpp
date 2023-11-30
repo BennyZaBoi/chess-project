@@ -1,7 +1,9 @@
 #include squares.h
 
 ~Squares::Squares(){ 
-    delete piece; 
+    if (piece != nullptr){
+        delete piece; 
+    }
 }
 
 int Squares::getColumn() const {
@@ -16,7 +18,7 @@ Piece* Squares::getPiece() const {
     return piece; 
 }
 
-Piece Squares::setPiece(Piece* selectedPiece){
+void Squares::setPiece(Piece* selectedPiece){
     piece = selectedPiece;
 }
 

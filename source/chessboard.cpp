@@ -16,7 +16,7 @@ Chessboard::~Chessboard(){
     delete[] board; 
 }
 
-bool Chessboard::pathClearStraight(Square* sqrOne, Square* sqrTwo){
+bool Chessboard::pathClearStraight(Square* sqrOne, Square* sqrTwo) const {
     int sqrOneRow = sqrOne.getRow();
     int sqrOneColumn = sqrOne.getColumn(); 
     int sqrTwoRow = sqrTwo.getRow();
@@ -63,7 +63,7 @@ bool Chessboard::pathClearStraight(Square* sqrOne, Square* sqrTwo){
     return true; 
 }
 
-bool Chessboard::pathClearDiagonal(Square* sqrOne, Square* sqrTwo){
+bool Chessboard::pathClearDiagonal(Square* sqrOne, Square* sqrTwo) const {
     int sqrOneRow = sqrOne.getRow();
     int sqrOneColumn = sqrOne.getColumn(); 
     int sqrTwoRow = sqrTwo.getRow();

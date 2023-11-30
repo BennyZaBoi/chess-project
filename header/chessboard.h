@@ -5,6 +5,7 @@ class Chessboard{
         Square* board;
     public: 
         Chessboard();
-        bool pathClearStraight(Square* rowSqr, Square* clmnSqr);
-        bool pathClearDiagonal(Square* rowSqr, Square* clmnSqr);
+        ~Chessboard(); 
+        bool pathClearStraight(Square* sqrOne, Square* sqrTwo) const;
+        bool pathClearDiagonal(Square* sqrOne, Square* sqrTwo) const;
 }

@@ -20,7 +20,7 @@ Piece Squares::setPiece(Piece* selectedPiece){
     piece = selectedPiece;
 }
 
-bool Squares::isOccupied(){
+bool Squares::isOccupied() const {
     if (getPiece() != nullptr){
         return true;
     }

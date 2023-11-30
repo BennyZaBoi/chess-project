@@ -24,5 +24,5 @@ class Squares {
         int getColumn() const; 
         Piece* getPiece() const; 
         Piece setPiece(Piece* piece);
-        bool isOccupied(); 
+        bool isOccupied() const; 
 }

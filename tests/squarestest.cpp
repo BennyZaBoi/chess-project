@@ -7,5 +7,5 @@ TEST(SquareTests, DefaultConstructor){
 
 TEST(SquareTests, NonDefaultConstructor){
     Piece randomPiece;  
-    EXPECT_NO_THROW(Squares* newSquare = new Squares(1, 1, randomPiece);
+    EXPECT_NO_THROW(Squares* newSquare = new Squares(1, 1, randomPiece));
 }

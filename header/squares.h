@@ -23,6 +23,6 @@ class Squares {
         int getRow() const; 
         int getColumn() const; 
         Piece* getPiece() const; 
-        Piece setPiece(Piece* piece);
+        void setPiece(Piece* piece);
         bool isOccupied() const; 
 }

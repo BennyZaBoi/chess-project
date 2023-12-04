@@ -1,7 +1,7 @@
 runAllTests
 Makefile
 CMakeCache.txt
-CMakeFiles
+CMakeFiles/
 cmake_install.cmake
 lib/
 runPlayerTests

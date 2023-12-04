@@ -161,6 +161,6 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
     }
 }
 
-Squares* Chessboard::getSquare(int row, int column){
+Squares* Chessboard::getSquare(int row, int column) const {
     return board[row][column]; 
 }  

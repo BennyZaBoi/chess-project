@@ -3,8 +3,11 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runAllTests
-    tests/test.cpp
-    src/rectangle.cpp
+    tests/allTests.cpp
+    source/squares.cpp
+    source/Knight.cpp
+    source/Piece.cpp
+    source/chessboard.cpp
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gtest)

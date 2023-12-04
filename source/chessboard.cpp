@@ -1,10 +1,14 @@
-#include chessboard.h
+#include "../header/chessboard.h"
 
 Chessboard::Chessboard(){
-    board = new Square*[8][8];
+    board = new Squares**[8];
+    for (int i = 0; i < 8; ++i){
+        board[i] = new Squares*[8];
+    }
+
     for (int i = 0; i < 8; ++i){
         for (int j = 0; j < 8; ++j){
-            board[i][j] = Squares(i, j, nullptr);
+            board[i][j] = new Squares(i, j, nullptr);
         }
     }
 }
@@ -16,11 +20,11 @@ Chessboard::~Chessboard(){
     delete[] board; 
 }
 
-bool Chessboard::pathClearStraight(Square* sqrOne, Square* sqrTwo) const {
-    int sqrOneRow = sqrOne.getRow();
-    int sqrOneColumn = sqrOne.getColumn(); 
-    int sqrTwoRow = sqrTwo.getRow();
-    int sqrTwoColumn = sqrtTwo.getColumn();
+bool Chessboard::pathClearStraight(Squares* sqrOne, Squares* sqrTwo) const {
+    int sqrOneRow = sqrOne->getRow();
+    int sqrOneColumn = sqrOne->getColumn(); 
+    int sqrTwoRow = sqrTwo->getRow();
+    int sqrTwoColumn = sqrTwo->getColumn();
 
     if ((sqrOneRow != sqrTwoRow) && (sqrOneColumn != sqrTwoColumn)){
         return false; 
@@ -30,15 +34,15 @@ bool Chessboard::pathClearStraight(Square* sqrOne, Square* sqrTwo) const {
     }
     else if (sqrOneColumn == sqrTwoColumn){
          if (sqrOneRow < sqrTwoRow){
-            for (int i = sqrOneRow; i <= sqrTwoRow; ++i){
-                if (board[i][column].getPiece() != nullptr){
+            for (int i = (sqrOneRow + 1); i <= sqrTwoRow; ++i){
+                if (board[i][sqrOneColumn]->getPiece() != nullptr){
                     return false; 
                 }
             }
         }
         else {
-            for (int i = sqrOneRow; i >= sqrTwoRow; --i){
-                if (board[i][column].getPiece() != nullptr){
+            for (int i = (sqrOneRow - 1); i >= sqrTwoRow; --i){
+                if (board[i][sqrOneColumn]->getPiece() != nullptr){
                     return false; 
                 }
             }
@@ -46,15 +50,15 @@ bool Chessboard::pathClearStraight(Square* sqrOne, Square* sqrTwo) const {
     }
     else if (sqrOneRow == sqrTwoRow){
         if (sqrOneColumn < sqrTwoColumn){
-            for (int i = sqrOneColumn; i <= sqrTwoColumn; ++i){
-                if (board[row][i].getPiece() != nullptr){
+            for (int i = (sqrOneColumn + 1); i <= sqrTwoColumn; ++i){
+                if (board[sqrOneRow][i]->getPiece() != nullptr){
                     return false; 
                 }
             }
         }
         else {
-            for (int i = sqrOneColumn; i >= sqrTwoColumn; ++i){
-                if (board[row][i].getPiece() != nullptr){
+            for (int i = (sqrOneColumn - 1); i >= sqrTwoColumn; --i){
+                if (board[sqrOneRow][i]->getPiece() != nullptr){
                     return false; 
                 }
             }
@@ -63,50 +67,50 @@ bool Chessboard::pathClearStraight(Square* sqrOne, Square* sqrTwo) const {
     return true; 
 }
 
-bool Chessboard::pathClearDiagonal(Square* sqrOne, Square* sqrTwo) const {
-    int sqrOneRow = sqrOne.getRow();
-    int sqrOneColumn = sqrOne.getColumn(); 
-    int sqrTwoRow = sqrTwo.getRow();
-    int sqrTwoColumn = sqrtTwo.getColumn();
+bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
+    int sqrOneRow = sqrOne->getRow();
+    int sqrOneColumn = sqrOne->getColumn(); 
+    int sqrTwoRow = sqrTwo->getRow();
+    int sqrTwoColumn = sqrTwo->getColumn();
     int compareColumn = 0; 
     int compareRow = 0;
 
     if ((sqrOneRow == sqrTwoRow) || (sqrOneColumn == sqrTwoColumn)){
         return false; 
     }
-    if (sqrOneRow < sqrTwoRow){
+    else if (sqrOneRow < sqrTwoRow){
         if (sqrOneColumn < sqrTwoColumn){
             compareColumn = sqrOneColumn;
             for (int i = sqrOneRow; i <= sqrTwoRow; ++i){
                 if (i == sqrTwoRow){
-                    if (sqrOneColumn != sqrTwoColumn){
+                    if (compareColumn != sqrTwoColumn){
                         return false; 
                     }
                 }
                 ++compareColumn; 
             }
-            compareColumn = sqrOneColumn;
-            for (int i = sqrOneRow; i <= sqrTwoRow; ++i){
-                if (board[i][compareColumn].getPiece() != nullptr){
+            compareColumn = (sqrOneColumn + 1);
+            for (int i = (sqrOneRow + 1); i <= sqrTwoRow; ++i){
+                if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }
                 ++compareColumn;
             }
             return true; 
         }
-        else {
+        else if (sqrOneColumn > sqrTwoColumn){
             compareColumn = sqrOneColumn;
             for (int i = sqrOneRow; i <= sqrTwoRow; ++i){
                 if (i == sqrTwoRow){
-                    if (sqrOneColumn != sqrTwoColumn){
+                    if (compareColumn != sqrTwoColumn){
                         return false; 
                     }
                 }
                 --compareColumn; 
             }
-            compareColumn = sqrOneColumn;
-            for (int i = sqrOneRow; i <= sqrTwoRow; ++i){
-                if (board[i][compareColumn].getPiece() != nullptr){
+            compareColumn = (sqrOneColumn - 1);
+            for (int i = (sqrOneRow + 1); i <= sqrTwoRow; ++i){
+                if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }
                 --compareColumn;
@@ -117,17 +121,17 @@ bool Chessboard::pathClearDiagonal(Square* sqrOne, Square* sqrTwo) const {
     else {
         if (sqrOneColumn < sqrTwoColumn){
             compareColumn = sqrOneColumn;
-            for (int i = sqrOneRow; i <= sqrTwoRow; --i){
+            for (int i = sqrOneRow; i >= sqrTwoRow; --i){
                 if (i == sqrTwoRow){
-                    if (sqrOneColumn != sqrTwoColumn){
+                    if (compareColumn != sqrTwoColumn){
                         return false; 
                     }
                 }
                 ++compareColumn; 
             }
-            compareColumn = sqrOneColumn;
-            for (int i = sqrOneRow; i <= sqrTwoRow; --i){
-                if (board[i][compareColumn].getPiece() != nullptr){
+            compareColumn = (sqrOneColumn + 1);
+            for (int i = (sqrOneRow - 1); i >= sqrTwoRow; --i){
+                if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }
                 ++compareColumn;
@@ -136,17 +140,17 @@ bool Chessboard::pathClearDiagonal(Square* sqrOne, Square* sqrTwo) const {
         }
         else {
             compareColumn = sqrOneColumn;
-            for (int i = sqrOneRow; i <= sqrTwoRow; --i){
+            for (int i = sqrOneRow; i >= sqrTwoRow; --i){
                 if (i == sqrTwoRow){
-                    if (sqrOneColumn != sqrTwoColumn){
+                    if (compareColumn != sqrTwoColumn){
                         return false; 
                     }
                 }
                 --compareColumn; 
             }
-            compareColumn = sqrOneColumn;
-            for (int i = sqrOneRow; i <= sqrTwoRow; --i){
-                if (board[i][compareColumn].getPiece() != nullptr){
+            compareColumn = (sqrOneColumn - 1);
+            for (int i = (sqrOneRow - 1); i >= sqrTwoRow; --i){
+                if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }
                 --compareColumn;
@@ -157,3 +161,6 @@ bool Chessboard::pathClearDiagonal(Square* sqrOne, Square* sqrTwo) const {
     }
 }
 
+Squares* Chessboard::getSquare(int row, int column){
+    return board[row][column]; 
+}  

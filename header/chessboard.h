@@ -1,11 +1,14 @@
 #pragma once
 
+#include "squares.h"
+
 class Chessboard{
     private: 
-        Square* board;
+        Squares* **board;
     public: 
         Chessboard();
         ~Chessboard(); 
-        bool pathClearStraight(Square* sqrOne, Square* sqrTwo) const;
-        bool pathClearDiagonal(Square* sqrOne, Square* sqrTwo) const;
-}
+        bool pathClearStraight(Squares* sqrOne, Squares* sqrTwo) const;
+        bool pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const;
+        Squares* getSquare(int row, int column); 
+};

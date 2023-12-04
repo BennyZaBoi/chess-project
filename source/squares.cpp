@@ -1,6 +1,6 @@
-#include squares.h
+#include "../header/squares.h"
 
-~Squares::Squares(){ 
+Squares::~Squares(){ 
     if (piece != nullptr){
         delete piece; 
     }

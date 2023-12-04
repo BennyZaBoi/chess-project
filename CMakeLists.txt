@@ -4,18 +4,11 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runAllTests
     tests/allTests.cpp
-<<<<<<< HEAD
-    source/squares.cpp
-    source/Knight.cpp
-    source/Piece.cpp
-    source/chessboard.cpp
-=======
     source/Piece.cpp
     source/SpecialPiece.cpp
     source/Pawn.cpp
     source/King.cpp
     source/Knight.cpp
->>>>>>> master
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gtest)

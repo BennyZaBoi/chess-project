@@ -10,7 +10,7 @@ class Player{
     private: 
         string name;
         bool firstMove;
-        enum Color playColor;
+        Color playColor;
     
     public:
         Player();
@@ -21,8 +21,8 @@ class Player{
         void setColorChoice(Color c);
 
         string returnName() const;
-        int returnFirstMove() const;
-        char returnColorChoice() const;
+        bool returnFirstMove() const;
+        Color returnColorChoice() const;
 };
 
 #endif 

@@ -90,7 +90,7 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
                 ++compareColumn; 
             }
             compareColumn = (sqrOneColumn + 1);
-            for (int i = (sqrOneRow + 1); i <= sqrTwoRow; ++i){
+            for (int i = (sqrOneRow + 1); i < sqrTwoRow; ++i){
                 if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }
@@ -109,7 +109,7 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
                 --compareColumn; 
             }
             compareColumn = (sqrOneColumn - 1);
-            for (int i = (sqrOneRow + 1); i <= sqrTwoRow; ++i){
+            for (int i = (sqrOneRow + 1); i < sqrTwoRow; ++i){
                 if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }
@@ -130,7 +130,7 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
                 ++compareColumn; 
             }
             compareColumn = (sqrOneColumn + 1);
-            for (int i = (sqrOneRow - 1); i >= sqrTwoRow; --i){
+            for (int i = (sqrOneRow - 1); i > sqrTwoRow; --i){
                 if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }
@@ -149,7 +149,7 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
                 --compareColumn; 
             }
             compareColumn = (sqrOneColumn - 1);
-            for (int i = (sqrOneRow - 1); i >= sqrTwoRow; --i){
+            for (int i = (sqrOneRow - 1); i > sqrTwoRow; --i){
                 if (board[i][compareColumn]->getPiece() != nullptr){
                     return false; 
                 }

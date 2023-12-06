@@ -2,7 +2,7 @@
 #include "../header/chessvictory.h"
 using namespace std;
 
-TEST(ChessVictoryTests, displayVictoryScreen) {
+TEST(ChessVictoryTests, printVictoryScreen) {
     // Capture standard output
     testing::internal::CaptureStdout();
 

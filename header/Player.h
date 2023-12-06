@@ -14,15 +14,15 @@ class Player{
     
     public:
         Player();
-        Player(const string& playername);
+        Player(const string playername);
 
-        void setName(string &newname);
+        void setName(string newname);
         void setFirstMove(bool tf);
         void setColorChoice(Color c);
 
         string returnName() const;
-        int returnFirstMove() const;
-        char returnColorChoice() const;
+        bool returnFirstMove() const;
+        Color returnColorChoice() const;
 };
 
 #endif 

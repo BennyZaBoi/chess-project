@@ -2,9 +2,9 @@
 
 Player::Player(): name(""), firstMove(true), playColor(white) {}
 
-Player::Player(const string& playername): name(playername), firstMove(true), playColor(white) {}
+Player::Player(const string playername): name(playername), firstMove(true), playColor(white) {}
 
-void Player::setName(string& newname) {
+void Player::setName(string newname) {
     name = newname;
 }
 
@@ -20,13 +20,13 @@ string Player::returnName() const {
     return name;
 }
 
-int Player::returnFirstMove() const {
+bool Player::returnFirstMove() const {
     if (firstMove == true) {
         return true;
     }
     return false;
 }
 
-char Player::returnColorChoice() const {
+Color Player::returnColorChoice() const {
     return playColor;
 }

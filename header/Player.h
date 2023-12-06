@@ -10,7 +10,7 @@ class Player{
     private: 
         string name;
         bool firstMove;
-        enum Color playColor;
+        Color playColor;
     
     public:
         Player();

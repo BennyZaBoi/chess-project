@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../source/Player.cpp"
+#include "../header/Player.h"
 
 TEST(PlayerTests, defaultConstructorTest) {
     Player p1;

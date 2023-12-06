@@ -9,6 +9,8 @@ ADD_EXECUTABLE(runAllTests
     source/Pawn.cpp
     source/King.cpp
     source/Knight.cpp
+    source/chessvictory.cpp
+    source/chesswelcome.cpp
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gtest)

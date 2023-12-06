@@ -34,14 +34,14 @@ bool Chessboard::pathClearStraight(Squares* sqrOne, Squares* sqrTwo) const {
     }
     else if (sqrOneColumn == sqrTwoColumn){
          if (sqrOneRow < sqrTwoRow){
-            for (int i = (sqrOneRow + 1); i <= sqrTwoRow; ++i){
+            for (int i = (sqrOneRow + 1); i < sqrTwoRow; ++i){
                 if (board[i][sqrOneColumn]->getPiece() != nullptr){
                     return false; 
                 }
             }
         }
         else {
-            for (int i = (sqrOneRow - 1); i >= sqrTwoRow; --i){
+            for (int i = (sqrOneRow - 1); i > sqrTwoRow; --i){
                 if (board[i][sqrOneColumn]->getPiece() != nullptr){
                     return false; 
                 }
@@ -50,14 +50,14 @@ bool Chessboard::pathClearStraight(Squares* sqrOne, Squares* sqrTwo) const {
     }
     else if (sqrOneRow == sqrTwoRow){
         if (sqrOneColumn < sqrTwoColumn){
-            for (int i = (sqrOneColumn + 1); i <= sqrTwoColumn; ++i){
+            for (int i = (sqrOneColumn + 1); i < sqrTwoColumn; ++i){
                 if (board[sqrOneRow][i]->getPiece() != nullptr){
                     return false; 
                 }
             }
         }
         else {
-            for (int i = (sqrOneColumn - 1); i >= sqrTwoColumn; --i){
+            for (int i = (sqrOneColumn - 1); i > sqrTwoColumn; --i){
                 if (board[sqrOneRow][i]->getPiece() != nullptr){
                     return false; 
                 }
@@ -157,8 +157,8 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
             }
             return true; 
         }
-
     }
+    return false; 
 }
 
 Squares* Chessboard::getSquare(int row, int column) const {

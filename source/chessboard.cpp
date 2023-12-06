@@ -157,8 +157,8 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
             }
             return true; 
         }
+
     }
-    return false; 
 }
 
 Squares* Chessboard::getSquare(int row, int column) const {

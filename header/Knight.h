@@ -6,7 +6,7 @@
 class Knight : public Piece{
     public:
         Knight(Color, int, int);
-        const bool moveValid(int, int);//, Chessboard*);
+        bool moveValid(int, int, const Chessboard*) const;
 };
 
 #endif

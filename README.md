@@ -34,7 +34,7 @@ End Screen: For this part, once the chess game ends (by whoever manages to take 
 
 
 ## Class Diagram
-![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/5a36b92e-b5a3-41e5-848f-323277e6fc50)
+![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/20cc1e36-e5d3-40f9-8835-db2baded4c4d)
 
 Piece class: abstract class that is the parent of all the other classes for the different pieces and contains information that all pieces will need.
 
@@ -44,7 +44,7 @@ Queen, Bishop, Knight, Pawn, Rook classes: Overload the "moveValid" function fro
 
 King class: Same as previous, but also has the boolean "check" member variable and boolean "inCheck" member function to keep track of whether the King is in check.
 
-Square class: Object which stores its location and a Piece. Is used to build up the Chessboard class.
+Squares class: Object which stores its location and a Piece. Is used to build up the Chessboard class.
 
 Chessboard class: Contains each of the Squares of the board, and can check whether a particular movement path is clear. 
 
@@ -52,9 +52,7 @@ ChessboardDisplay class : Output the board and pieces to the terminal.
 
 Move class: Used in order to store the initial and final information of a particular move so that we can undo the move if the user chooses to.
 
-Capture class : If a move captured an opponent's piece, also stores the captured piece
-
-Player class: Simply stores the uses' names and what color they are.
+Player class: Simply stores the users' names, whether they moved first, and what color they are.
 
 GameManager class: Stores and maintains most of the different parts of the chess game.
 
@@ -98,6 +96,13 @@ Update 3
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application
+ 1. Clone the repository to your machine
+ 2. Go to the correct directory
+ 3. In your terminal run the Cmake and make files
+ 4. Run the executable called runGame
+ 5. Game should run
+ 6. Follow game prompts
+ 7. Have fun
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ The way our project was tested/validated was that before we merged any opened pull requests, we made sure   that the tests for their specific parts that were changed all passed. After merging, we pulled the updated  master branch and ran all the tests again to make sure that all the tests for the project still passed.
  

@@ -25,6 +25,7 @@ ADD_EXECUTABLE(runAllTests
     tests/allTests.cpp
     source/chessvictory.cpp
     source/chesswelcome.cpp
+    source/displaychessboard.cpp
     source/chessInstructions.cpp
     source/Player.cpp
     source/chessboard.cpp

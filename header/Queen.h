@@ -1,11 +1,11 @@
-#ifndef KNIGHT_H
-#define KNIGHT_H
+#ifndef QUEEN_H
+#define QUEEN_H
 
 #include "Piece.h"
 
-class Knight : public Piece{
+class Queen : public Piece{
     public:
-        Knight(Color, int, int);
+        Queen(Color, int, int);
         bool moveValid(int, int, const Chessboard*) const;
 };
 

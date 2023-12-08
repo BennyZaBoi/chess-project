@@ -2,9 +2,9 @@
 
 Player::Player(): name(""), firstMove(true), playColor(white) {}
 
-Player::Player(const string& playername): name(playername), firstMove(true), playColor(white) {}
+Player::Player(const string playername): name(playername), firstMove(true), playColor(white) {}
 
-void Player::setName(string& newname) {
+void Player::setName(string newname) {
     name = newname;
 }
 

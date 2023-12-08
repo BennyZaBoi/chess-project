@@ -2,9 +2,6 @@
 #define CHESS_VICTORY_H
 using namespace std;
 
-class ChessVictory{
-    public:
-        static void printVictoryScreen();
-};
+void displayVictoryScreen();
 
 #endif

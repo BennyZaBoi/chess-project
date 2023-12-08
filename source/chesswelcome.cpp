@@ -2,7 +2,7 @@
 #include "../header/chesswelcome.h"
 using namespace std;
 
-void ChessWelcome::printWelcomeScreen() {
+void printWelcomeScreen() {
     cout << "*************************************" << endl;
     cout << "*      Welcome to UCR Chess!       *" << endl;
     cout << "*************************************" << endl;

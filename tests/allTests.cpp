@@ -7,6 +7,8 @@
 #include "pawnTests.h"
 #include "KnightTests.h"
 #include "PlayerTests.h"
+#include "chesswelcometest.h"
+#include "chessvictorytest.h"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

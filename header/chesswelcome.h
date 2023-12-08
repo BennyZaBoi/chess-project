@@ -2,9 +2,6 @@
 #define CHESS_WELCOME_H
 using namespace std;
 
-class ChessWelcome {
-    public: 
-        static void printWelcomeScreen();
-};
+void printWelcomeScreen();
 
 #endif

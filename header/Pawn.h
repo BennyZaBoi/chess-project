@@ -8,7 +8,7 @@ class Pawn : public SpecialPiece{
         bool movesUp;
     public:
         Pawn(Color, int, int, bool);
-        const bool moveValid(int, int);//, Chessboard*);
+        bool moveValid(int, int, const Chessboard*) const;
 };
 
 #endif

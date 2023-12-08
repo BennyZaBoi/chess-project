@@ -4,6 +4,10 @@
 #include "Color.h"
 #include <cstdlib>
 
+// forward declarations
+class Chessboard;
+class Squares;
+
 enum Type{
     Pn,
     Bp,
@@ -21,13 +25,16 @@ class Piece{
         int column;
     public:
         Piece(Color, Type, int, int);
-        const Color getColor();
-        const Type getType();
-        const int getRow();
-        const int getColumn();
-        const bool onBoard(int, int);
-        const bool isMoving(int, int);
-        virtual const bool moveValid(int, int) = 0;//, Chessboard*) = 0;
+        Color getColor() const;
+        Type getType() const;
+        int getRow() const;
+        int getColumn() const;
+        void setRow(int);
+        void setColumn(int);
+        bool onBoard(int, int) const;
+        bool isMoving(int, int) const;
+        bool attackingAlly(int, int, const Chessboard*) const;
+        virtual bool moveValid(int, int, const Chessboard*) const = 0;
 };
 
 #endif

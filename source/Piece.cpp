@@ -1,4 +1,6 @@
 #include "../header/Piece.h"
+#include "../header/chessboard.h"
+#include "../header/squares.h"
 #include <stdexcept>
 
 Piece::Piece(Color _color, Type _type, int _row, int _column){
@@ -11,26 +13,44 @@ Piece::Piece(Color _color, Type _type, int _row, int _column){
     }
 }
 
-const Color Piece::getColor(){
+Color Piece::getColor() const{
     return color;
 }
 
-const Type Piece::getType(){
+Type Piece::getType() const{
     return type;
 }
 
-const int Piece::getRow(){
+int Piece::getRow() const{
     return row;
 }
 
-const int Piece::getColumn(){
+int Piece::getColumn() const{
     return column;
 }
 
-const bool Piece::onBoard(int _row, int _column){
+void Piece::setRow(int newRow){
+    row = newRow;
+}
+
+void Piece::setColumn(int newColumn){
+    column = newColumn;
+}
+
+bool Piece::onBoard(int _row, int _column) const{
     return (_row >= 0 && _row <= 7 && _column >= 0 && _column <= 7);
 }
 
-const bool Piece::isMoving(int _row, int _column){
+bool Piece::isMoving(int _row, int _column) const{
     return (_row != row || _column != column);
+}
+bool Piece::attackingAlly(int _row, int _column, const Chessboard* board) const{
+    Squares* targetSquare = board->getSquare(_row, _column);
+    // checks if the square if occupied by a piece
+    if(targetSquare->isOccupied()){
+        if (targetSquare->getPiece()->getColor() == color){
+            return true;
+        }
+    }
+    return false;
 }

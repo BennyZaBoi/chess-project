@@ -1,4 +1,7 @@
 #include "gtest/gtest.h"
+#include "chesswelcometest.h"
+#include "chessvictorytest.h"
+#include "PlayerTests.h"
 #include "chessboardtest.h"
 #include "squarestest.h"
 #include "pieceTests.h"
@@ -6,7 +9,8 @@
 #include "kingTests.h"
 #include "pawnTests.h"
 #include "KnightTests.h"
-#include "PlayerTests.h"
+#include "rookTests.h"
+#include "bishopTests.h"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

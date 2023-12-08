@@ -14,9 +14,9 @@ class Player{
     
     public:
         Player();
-        Player(const string& playername);
+        Player(const string playername);
 
-        void setName(string &newname);
+        void setName(string newname);
         void setFirstMove(bool tf);
         void setColorChoice(Color c);
 

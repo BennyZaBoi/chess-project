@@ -1,6 +1,8 @@
 #pragma once 
 
 #include "Piece.h"
+#include "SpecialPiece.h"
+#include "Rook.h"
 #include <stdexcept>
 
 class Squares {

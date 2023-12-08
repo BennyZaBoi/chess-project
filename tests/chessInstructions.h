@@ -8,7 +8,7 @@ TEST(ChessInstructionTest, printInstructionsScreen) {
     "                                                                   Instructions                                                            "
     "*******************************************************************************************************************************************"
     " Chess is a two-player game played on an 8x8 chessboard."                                                                                   
-    " The goal of the game is to checkmate the enemy king, which means the king is in check and can't go anywhere else without being in check."  
+    " The goal of the game is to checkmate the enemy king."  
     " Each piece has its own unique movement pattern and can not move over other pieces except for the knight:"                                  
     "       King: 1 square in any direction, but can't be in a square directly next to the enemy king."                                          
     "       Queen: any number of squares in any direction(vertical, horizontal, diagonal)."                                                         

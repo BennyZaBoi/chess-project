@@ -10,6 +10,7 @@
 #include "pawnTests.h"
 #include "KnightTests.h"
 #include "rookTests.h"
+#include "bishopTests.h"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

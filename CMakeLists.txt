@@ -15,6 +15,7 @@ ADD_EXECUTABLE(runGame
     source/King.cpp
     source/Knight.cpp
     source/Rook.cpp
+    source/Bishop.cpp
 )
 ADD_EXECUTABLE(runAllTests
     tests/allTests.cpp
@@ -29,6 +30,7 @@ ADD_EXECUTABLE(runAllTests
     source/King.cpp
     source/Knight.cpp
     source/Rook.cpp
+    source/Bishop.cpp
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gtest)

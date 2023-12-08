@@ -13,32 +13,29 @@ TEST(RookMovementTests, HorizontalEmptyEnd){
 TEST(RookMovementTests, HorizontalAllyEnd){
     Chessboard* board = new Chessboard();
     Rook* myRook = new Rook(black, 4, 4);
-    board->getSquare(4, 5)->setPiece(new Rook(black, 4, 5));
     board->getSquare(4, 7)->setPiece(new Rook(black, 4, 7));
-    board->getSquare(4, 3)->setPiece(new Rook(black, 4, 3));
     board->getSquare(4, 0)->setPiece(new Rook(black, 4, 0));
-    EXPECT_FALSE(myRook->moveValid(4, 5, board));
     EXPECT_FALSE(myRook->moveValid(4, 7, board));
-    EXPECT_FALSE(myRook->moveValid(4, 3, board));
     EXPECT_FALSE(myRook->moveValid(4, 0, board));
+
+    board->getSquare(4, 5)->setPiece(new Rook(black, 4, 5));
+    board->getSquare(4, 3)->setPiece(new Rook(black, 4, 3));
+    EXPECT_FALSE(myRook->moveValid(4, 5, board));
+    EXPECT_FALSE(myRook->moveValid(4, 3, board));
 }
 
-TEST(RookMovementTests, HorizontalEnemyEndClose){
-    Chessboard* board = new Chessboard();
-    Rook* myRook = new Rook(black, 4, 4);
-    board->getSquare(4, 5)->setPiece(new Rook(white, 4, 5));
-    board->getSquare(4, 3)->setPiece(new Rook(white, 4, 3));
-    EXPECT_TRUE(myRook->moveValid(4, 5, board));
-    EXPECT_TRUE(myRook->moveValid(4, 3, board));
-}
-
-TEST(RookMovementTests, HorizontalEnemyEndFar){
+TEST(RookMovementTests, HorizontalEnemyEnd){
     Chessboard* board = new Chessboard();
     Rook* myRook = new Rook(black, 4, 4);
     board->getSquare(4, 7)->setPiece(new Rook(white, 4, 7));
     board->getSquare(4, 0)->setPiece(new Rook(white, 4, 0));
     EXPECT_TRUE(myRook->moveValid(4, 7, board));
     EXPECT_TRUE(myRook->moveValid(4, 0, board));
+
+    board->getSquare(4, 5)->setPiece(new Rook(white, 4, 5));
+    board->getSquare(4, 3)->setPiece(new Rook(white, 4, 3));
+    EXPECT_TRUE(myRook->moveValid(4, 5, board));
+    EXPECT_TRUE(myRook->moveValid(4, 3, board));
 }
 
 TEST(RookMovementTests, VerticalEmptyEnd){
@@ -53,32 +50,29 @@ TEST(RookMovementTests, VerticalEmptyEnd){
 TEST(RookMovementTests, VerticalAllyEnd){
     Chessboard* board = new Chessboard();
     Rook* myRook = new Rook(black, 4, 4);
-    board->getSquare(5, 4)->setPiece(new Rook(black, 5, 4));
     board->getSquare(7, 4)->setPiece(new Rook(black, 7, 4));
-    board->getSquare(3, 4)->setPiece(new Rook(black, 3, 4));
     board->getSquare(0, 4)->setPiece(new Rook(black, 0, 4));
-    EXPECT_FALSE(myRook->moveValid(5, 4, board));
     EXPECT_FALSE(myRook->moveValid(7, 4, board));
-    EXPECT_FALSE(myRook->moveValid(3, 4, board));
     EXPECT_FALSE(myRook->moveValid(0, 4, board));
+
+    board->getSquare(5, 4)->setPiece(new Rook(black, 5, 4));
+    board->getSquare(3, 4)->setPiece(new Rook(black, 3, 4));
+    EXPECT_FALSE(myRook->moveValid(5, 4, board));
+    EXPECT_FALSE(myRook->moveValid(3, 4, board));
 }
 
-TEST(RookMovementTests, VerticalEnemyEndClose){
-    Chessboard* board = new Chessboard();
-    Rook* myRook = new Rook(black, 4, 4);
-    board->getSquare(5, 4)->setPiece(new Rook(white, 5, 4));
-    board->getSquare(3, 4)->setPiece(new Rook(white, 3, 4));
-    EXPECT_TRUE(myRook->moveValid(5, 4, board));
-    EXPECT_TRUE(myRook->moveValid(3, 4, board));
-}
-
-TEST(RookMovementTests, VerticalEnemyEndFar){
+TEST(RookMovementTests, VerticalEnemyEnd){
     Chessboard* board = new Chessboard();
     Rook* myRook = new Rook(black, 4, 4);
     board->getSquare(7, 4)->setPiece(new Rook(white, 7, 4));
     board->getSquare(0, 4)->setPiece(new Rook(white, 0, 4));
     EXPECT_TRUE(myRook->moveValid(7, 4, board));
     EXPECT_TRUE(myRook->moveValid(0, 4, board));
+
+    board->getSquare(5, 4)->setPiece(new Rook(white, 5, 4));
+    board->getSquare(3, 4)->setPiece(new Rook(white, 3, 4));
+    EXPECT_TRUE(myRook->moveValid(5, 4, board));
+    EXPECT_TRUE(myRook->moveValid(3, 4, board));
 }
 
 TEST(RookMovementTests, AllyInWay){

@@ -34,7 +34,7 @@ End Screen: For this part, once the chess game ends (by whoever manages to take 
 
 
 ## Class Diagram
-![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/20cc1e36-e5d3-40f9-8835-db2baded4c4d)
+![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/cc5a37c4-2d7e-4071-9ad2-ce1d616ea6b4)
 
 Piece class: abstract class that is the parent of all the other classes for the different pieces and contains information that all pieces will need.
 

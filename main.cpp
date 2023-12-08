@@ -16,7 +16,7 @@ using namespace std;
 int main() {
     int choices;
     do {
-        ChessWelcome::printWelcomeScreen();
+        printWelcomeScreen();
 
         cout << "Please enter your choice!" << endl;
         cin >> choices;

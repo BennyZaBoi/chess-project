@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "chesswelcometest.h"
 #include "chessvictorytest.h"
-#include "PlayerTests.h"
+#include "chessInstructions.h"
 #include "chessboardtest.h"
 #include "squarestest.h"
 #include "pieceTests.h"
@@ -10,6 +10,8 @@
 #include "queenTests.h"
 #include "pawnTests.h"
 #include "KnightTests.h"
+#include "PlayerTests.h"
+#include "displaychessboardtest.h"
 #include "rookTests.h"
 #include "bishopTests.h"
 

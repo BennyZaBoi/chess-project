@@ -1,4 +1,5 @@
 #include "../header/squares.h"
+#include "../header/Piece.h"
 
 Squares::~Squares(){ 
     if (piece != nullptr){

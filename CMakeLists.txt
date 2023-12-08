@@ -1,11 +1,14 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
+project(FinalChessProject)
+
 ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runGame
     main.cpp
     source/chessvictory.cpp
     source/chesswelcome.cpp
+    source/chessInstructions.cpp
     source/Player.cpp
     source/chessboard.cpp
     source/squares.cpp
@@ -22,6 +25,7 @@ ADD_EXECUTABLE(runAllTests
     tests/allTests.cpp
     source/chessvictory.cpp
     source/chesswelcome.cpp
+    source/chessInstructions.cpp
     source/Player.cpp
     source/chessboard.cpp
     source/squares.cpp

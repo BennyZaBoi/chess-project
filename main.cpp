@@ -2,6 +2,7 @@
 #include "header/chessboard.h"
 #include "header/chessvictory.h"
 #include "header/chesswelcome.h"
+#include "header/chessInstructions.h"
 #include "header/Color.h"
 #include "header/King.h"
 #include "header/Knight.h"
@@ -25,7 +26,15 @@ int main() {
             cout << "You choose to start the game!" << endl;
         }
         else if (choices == 2) {
-            cout << "You pick the instructions!" << endl;
+            printInstructions();
+            cin >> choices;
+            while (choices != 1) {
+                cout << "Press 1 to return to the welcome menu." << endl;
+                cin.clear();
+                cin.ignore();
+                cin >> choices;
+            }
+            choices = 0;
         }
         else if (choices == 3 ) {
             cout << "Exiting..." << endl;

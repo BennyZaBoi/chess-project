@@ -156,8 +156,7 @@ bool Chessboard::pathClearDiagonal(Squares* sqrOne, Squares* sqrTwo) const {
                 --compareColumn;
             }
             return true; 
-        }
-
+        } 
     }
     return false; 
 }

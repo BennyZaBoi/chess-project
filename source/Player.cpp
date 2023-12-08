@@ -20,13 +20,13 @@ string Player::returnName() const {
     return name;
 }
 
-int Player::returnFirstMove() const {
+bool Player::returnFirstMove() const {
     if (firstMove == true) {
         return true;
     }
     return false;
 }
 
-char Player::returnColorChoice() const {
+Color Player::returnColorChoice() const {
     return playColor;
 }

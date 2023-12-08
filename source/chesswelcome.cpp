@@ -13,6 +13,8 @@ void ChessWelcome::printWelcomeScreen() {
 
 }
 
+
+/*
 int main() {
     int choices;
     do {
@@ -37,3 +39,4 @@ int main() {
 
     return 0;
 }
+*/

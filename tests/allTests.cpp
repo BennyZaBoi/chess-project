@@ -1,4 +1,6 @@
 #include "gtest/gtest.h"
+#include "chessboardtest.h"
+#include "squarestest.h"
 #include "pieceTests.h"
 #include "specialPieceTests.h"
 #include "kingTests.h"

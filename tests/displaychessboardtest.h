@@ -1,5 +1,8 @@
 #include "gtest/gtest.h"
 #include "../header/displaychessboard.h"
+#include "../header/Rook.h"
+#include "../header/Queen.h"
+#include "../header/Knight.h"
 
 TEST(DisplayChessboardTests, TypeTestKnight){
     Chessboard* newBoard = new Chessboard();

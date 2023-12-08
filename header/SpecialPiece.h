@@ -9,7 +9,7 @@ class SpecialPiece : public Piece{
         bool moved;
     public:
         SpecialPiece(Color, Type, int, int);
-        const bool hasMoved();
+        bool hasMoved() const;
         void setMoved();
 };
 

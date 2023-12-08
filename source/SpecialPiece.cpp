@@ -1,8 +1,10 @@
 #include "../header/SpecialPiece.h"
+#include "../header/chessboard.h"
+#include "../header/squares.h"
 
 SpecialPiece::SpecialPiece(Color _color, Type _type, int _row, int _column) : Piece(_color, _type, _row, _column), moved(false){}
 
-const bool SpecialPiece::hasMoved(){
+bool SpecialPiece::hasMoved() const{
     return moved;
 }
 

@@ -8,6 +8,7 @@
 #include "pieceTests.h"
 #include "specialPieceTests.h"
 #include "kingTests.h"
+#include "queenTests.h"
 #include "pawnTests.h"
 #include "KnightTests.h"
 #include "rookTests.h"

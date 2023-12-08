@@ -15,6 +15,7 @@ ADD_EXECUTABLE(runAllTests
     source/Player.cpp
     source/chessvictory.cpp
     source/chesswelcome.cpp
+    source/displaychessboard.cpp
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gtest)

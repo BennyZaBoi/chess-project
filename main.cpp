@@ -34,6 +34,7 @@ int main() {
                 cin.ignore();
                 cin >> choices;
             }
+            choices = 0;
         }
         else if (choices == 3 ) {
             cout << "Exiting..." << endl;

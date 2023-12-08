@@ -27,6 +27,9 @@ bool Pawn::moveValid(int newRow, int newColumn, const Chessboard* board) const{
                 if(rowMovement == 1 && columnMovement == 0 ){
                     return true;
                 }
+                else if(rowMovement == 2 && columnMovement == 0 && board->pathClearStraight(board->getSquare(row, column), targetSquare) && !hasMoved()){
+                    return true;
+                }
             }
             // checks that pawn is attacking an enemy if trying to move diagonally
             else if(targetSquare->getPiece()->getColor() != color){

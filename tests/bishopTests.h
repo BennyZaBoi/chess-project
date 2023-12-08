@@ -61,7 +61,7 @@ TEST(BishopMovementTests, URandDLAllyEnd){
     EXPECT_FALSE(myBishop->moveValid(5, 2, board));
 }
 
-TEST(BishopMovementTests, URandDLYEnemyEndClose){
+TEST(BishopMovementTests, URandDLYEnemyEnd){
     Chessboard* board = new Chessboard();
     Bishop* myBishop = new Bishop(black, 4, 3);
     board->getSquare(0, 7)->setPiece(new Bishop(white, 0, 7));

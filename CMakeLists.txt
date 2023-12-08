@@ -13,6 +13,7 @@ ADD_EXECUTABLE(runGame
     source/SpecialPiece.cpp
     source/Pawn.cpp
     source/King.cpp
+    source/Queen.cpp
     source/Knight.cpp
     source/Rook.cpp
     source/Bishop.cpp
@@ -28,6 +29,7 @@ ADD_EXECUTABLE(runAllTests
     source/SpecialPiece.cpp
     source/Pawn.cpp
     source/King.cpp
+    source/Queen.cpp
     source/Knight.cpp
     source/Rook.cpp
     source/Bishop.cpp

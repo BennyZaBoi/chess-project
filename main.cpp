@@ -31,10 +31,8 @@ int main() {
             while (choices != 1) {
                 cout << "Press 1 to return to the welcome menu." << endl;
                 cin.clear();
+                cin.ignore();
                 cin >> choices;
-                if (cin.fail()) {
-                    cout << "Please press 1 to return to the welcome menu." << endl;
-                }
             }
         }
         else if (choices == 3 ) {

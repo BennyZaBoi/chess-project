@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "chesswelcometest.h"
 #include "chessvictorytest.h"
+#include "chessInstructions.h"
 #include "PlayerTests.h"
 #include "chessboardtest.h"
 #include "squarestest.h"

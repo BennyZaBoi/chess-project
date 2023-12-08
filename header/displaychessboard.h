@@ -4,7 +4,8 @@
 class ChessboardDisplay{
     private:
     public: 
-        ChessboardDisplay(); 
+        ChessboardDisplay(){} 
         ~ChessboardDisplay(); 
+        bool displayTrue(Chessboard* board);
         void displayBoard(Chessboard* board); 
 };

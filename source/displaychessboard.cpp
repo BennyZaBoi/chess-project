@@ -3,10 +3,20 @@
 
 using namespace std; 
 
+bool ChessboardDisplay::displayTrue(Chessboard* board){
+    if (board->getSquare(0, 0)->getPiece()->getType() == Kn){
+        return true; 
+    }
+    return false; 
+}
+
 void ChessboardDisplay::displayBoard(Chessboard* board){
     for (int i = 0; i < 8; ++i){
         for (int j = 0; j < 8; ++j){
-            if(board->getSquare(i, j)->getPiece()->getType() == Pn){
+            if(board->getSquare(i, j)->getPiece() == nullptr){
+                cout << "|  |"; 
+            }
+            else if(board->getSquare(i, j)->getPiece()->getType() == Pn){
                 cout << "|Pn|";
             }
             else if(board->getSquare(i, j)->getPiece()->getType() == Kn){
@@ -27,7 +37,6 @@ void ChessboardDisplay::displayBoard(Chessboard* board){
             else {
                 cout << "|  |"; 
             }
-
         }
         cout << endl; 
         for (int k = 0; k < 8; ++k){

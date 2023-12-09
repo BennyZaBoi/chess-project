@@ -58,12 +58,12 @@ void Chessboard::initializeChessboard(Color playerOneColor, Color playerTwoColor
 
     board[7][0]->setPiece(new Rook(playerTwoColor, 7, 0));
     board[7][7]->setPiece(new Rook(playerTwoColor, 7, 7));
-    board[7][1]->setPiece(new Knight(playerOneColor, 7, 1));
-    board[7][6]->setPiece(new Knight(playerOneColor, 7, 6));
-    board[7][5]->setPiece(new Bishop(playerOneColor, 7, 5));
-    board[7][2]->setPiece(new Bishop(playerOneColor, 7, 2));
-    board[7][3]->setPiece(new Queen(playerOneColor, 7, 3));
-    board[7][4]->setPiece(new King(playerOneColor, 7, 4));
+    board[7][1]->setPiece(new Knight(playerTwoColor, 7, 1));
+    board[7][6]->setPiece(new Knight(playerTwoColor, 7, 6));
+    board[7][5]->setPiece(new Bishop(playerTwoColor, 7, 5));
+    board[7][2]->setPiece(new Bishop(playerTwoColor, 7, 2));
+    board[7][3]->setPiece(new Queen(playerTwoColor, 7, 3));
+    board[7][4]->setPiece(new King(playerTwoColor, 7, 4));
 
 
 

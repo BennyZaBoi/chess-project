@@ -31,5 +31,7 @@ class Squares {
         int getColumn() const; 
         Piece* getPiece() const; 
         void setPiece(Piece* piece);
+        Piece* pickUpPiece(); 
+        void removePiece(); 
         bool isOccupied() const; 
 };

@@ -10,6 +10,7 @@ ADD_EXECUTABLE(runGame
     source/chesswelcome.cpp
     source/chessInstructions.cpp
     source/Player.cpp
+    source/customize.cpp
     source/chessboard.cpp
     source/squares.cpp
     source/Piece.cpp
@@ -27,6 +28,7 @@ ADD_EXECUTABLE(runAllTests
     source/chesswelcome.cpp
     source/chessInstructions.cpp
     source/Player.cpp
+    source/customize.cpp
     source/chessboard.cpp
     source/squares.cpp
     source/Piece.cpp

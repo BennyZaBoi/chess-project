@@ -16,6 +16,7 @@ void printInstructions() {
     cout << "           Knights can also move over your and your enemy's pieces."                                                       << endl;
     cout << "       Pawn: can move 1 square forward but can only capture 1 square diagonally."                                          << endl;
     cout << "           Pawns can move 2 squares forward if they haven't moved yet in the game."                                        << endl;
+    cout << " Player 1 will always go first."                                                                                           << endl;
     cout << " To make a move, enter the starting and ending coordinates in row then column format."                                     << endl;
     cout << "       (ex: '12 14' indicates you want to move the piece on row 1 column 2 to row 1 column 2)."                            << endl;
     cout << " Press 1 to return to the welcome menu."                                                                                   << endl;

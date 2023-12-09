@@ -3,6 +3,7 @@
 #include "header/chessvictory.h"
 #include "header/chesswelcome.h"
 #include "header/chessInstructions.h"
+#include "header/customize.h"
 #include "header/Color.h"
 #include "header/King.h"
 #include "header/Knight.h"
@@ -23,7 +24,8 @@ int main() {
         cin >> choices;
 
         if (choices == 1) {
-            cout << "You choose to start the game!" << endl;
+            customizeScreen();
+            
         }
         else if (choices == 2) {
             printInstructions();

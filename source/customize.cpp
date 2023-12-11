@@ -3,16 +3,16 @@
 #include "../header/Player.h"
 using namespace std;
 
-void customizeScreen() {
+void customizeScreen(Player p1, Player p2) {
     string p1Name;
     string p1Color;
 
     cout << "Enter Player 1 name:" << endl;
     cin >> p1Name;
+    p1.setName(p1Name);
     cout << "Enter Player 1 color:" << endl;
     cout << "You can choose from: \033[30m black, \033[31m red, \033[32m green, \033[33m yellow, \033[34m blue, \033[35m magenta, \033[36m cyan, \033[37m white" << endl;
     cin >> p1Color;
-    Player p1(p1Name);
     if (p1Color == "black") {
         p1.setColorChoice(black);
     }
@@ -42,11 +42,11 @@ void customizeScreen() {
     string p2Color;
     
     cout << "Enter Player 2 name:" << endl;
-    cin >> p1Name;
+    cin >> p2Name;
+    p2.setName(p2Name);
     cout << "Enter Player 2 color:" << endl;
     cout << "You can choose from: \033[30m black, \033[31m red, \033[32m green, \033[33m yellow, \033[34m blue, \033[35m magenta, \033[36m cyan, \033[37m white" << endl;
-    cin >> p1Color;
-    Player p2(p2Name);
+    cin >> p2Color;
     p2.setFirstMove(false);
     if (p2Color == "black") {
         p2.setColorChoice(black);

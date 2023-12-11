@@ -4,10 +4,14 @@
 #include "header/chesswelcome.h"
 #include "header/chessInstructions.h"
 #include "header/customize.h"
+#include "header/displaychessboard.h"
 #include "header/Color.h"
 #include "header/King.h"
 #include "header/Knight.h"
 #include "header/Pawn.h"
+#include "header/Queen.h"
+#include "header/Rook.h"
+#include "header/Bishop.h"
 #include "header/Piece.h"
 #include "header/Player.h"
 #include "header/SpecialPiece.h"
@@ -24,8 +28,13 @@ int main() {
         cin >> choices;
 
         if (choices == 1) {
-            customizeScreen();
-            
+            Player p1;
+            Player p2;
+            customizeScreen(p1, p2);
+            Chessboard* newBoard = new Chessboard();
+            newBoard->initializeChessboard(p1.returnColorChoice(), p2.returnColorChoice()); 
+            ChessboardDisplay* showChess = new ChessboardDisplay();
+            showChess->displayBoard(newBoard);
         }
         else if (choices == 2) {
             printInstructions();

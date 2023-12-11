@@ -4,6 +4,6 @@
 #include "../header/Player.h"
 using namespace std;
 
-void customizeScreen(Player p1, Player p2);
+Color customizeScreen(string colorChoice);
 
 #endif

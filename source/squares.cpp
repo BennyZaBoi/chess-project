@@ -20,7 +20,26 @@ Piece* Squares::getPiece() const {
 }
 
 void Squares::setPiece(Piece* selectedPiece){
-    piece = selectedPiece;
+    if (piece == nullptr){
+        piece = selectedPiece;
+        piece->setRow(row);
+        piece->setColumn(column);
+    } 
+}
+
+Piece* Squares::pickUpPiece(){
+    if (piece != nullptr){
+        Piece* pickedUpPiece = piece;  
+        piece = nullptr; 
+        return pickedUpPiece; 
+    }
+} 
+
+void Squares::removePiece(){
+    if (piece != nullptr){
+        delete piece;
+        piece = nullptr; 
+    }
 }
 
 bool Squares::isOccupied() const {

@@ -58,8 +58,7 @@ int main() {
             newBoard->initializeChessboard(p1.returnColorChoice(), p2.returnColorChoice()); 
             ChessboardDisplay* showChess = new ChessboardDisplay();
             showChess->displayBoard(newBoard);
-            playGame(p1, p2, newBoard);
-            showChess->displayBoard(newBoard);
+            playGame(p1, p2, newBoard, showChess);
         }
         else if (choices == 2) {
             printInstructions();

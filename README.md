@@ -34,7 +34,7 @@ End Screen: For this part, once the chess game ends (by whoever manages to take 
 
 
 ## Class Diagram
-![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/5a6c58c6-8388-4ee4-b4c0-e07f6c236e25)
+![image](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/6c1d7d4d-cc59-4fd3-a656-44c4f1f2ba04)
 
 Piece class: abstract class that is the parent of all the other classes for the different pieces and contains information that all pieces will need.
 
@@ -53,10 +53,6 @@ ChessboardDisplay class : Output the board and pieces to the terminal.
 Move class: Used in order to store the initial and final information of a particular move so that we can undo the move if the user chooses to.
 
 Player class: Simply stores the users' names, whether they moved first, and what color they are.
-
-GameManager class: Stores and maintains most of the different parts of the chess game.
-
-GameController class : Handles the bulk of how the game runs, including beginning and ending the game, saving and laoding games, keeping track of the moves that have made, and getting actions from the user
 
 ## SOLID Class Diagram Updates
 
@@ -88,9 +84,12 @@ Update 3
  ## Final deliverable 
 
  ## Screenshots
+ <img width="710" alt="image" src="https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/e587944a-7913-4137-a92d-436c24cb4623">
+ <img width="520" alt="image" src="https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/a3475f69-e76f-45fd-b2c5-24aaf06c3e37">
+ <img width="434" alt="image" src="https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/147004786/fb68280b-462d-4a01-85e7-cc804998ace6">
  
  ## Installation/Usage
- > Instructions on installing and running your application
+ Instructions on installing and running your application
  1. Clone the repository to your machine
  2. Go to the correct directory
  3. In your terminal run the Cmake and make files
@@ -100,5 +99,5 @@ Update 3
  7. Have fun
     
  ## Testing
- The way our project was tested/validated was that before we merged any opened pull requests, we made sure   that the tests for their specific parts that were changed all passed. After merging, we pulled the updated  master branch and ran all the tests again to make sure that all the tests for the project still passed.
+ The way our project was tested/validated was that through the use of googletest. Before we merged any opened pull requests, we made sure that the tests for their specific parts that were changed all passed. After merging, we pulled the updated  master branch and ran   all the tests again to make sure that all the tests for the project still passed.
  

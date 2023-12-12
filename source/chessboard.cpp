@@ -5,6 +5,7 @@
 #include "../header/Bishop.h"
 #include "../header/Pawn.h"
 #include "../header/King.h"
+#include "../header/Color.h"
 
 
 Chessboard::Chessboard(){

@@ -12,6 +12,8 @@ ADD_EXECUTABLE(runGame
     source/Player.cpp
     source/customize.cpp
     source/chessboard.cpp
+    source/displaychessboard.cpp
+    source/playGame.cpp
     source/squares.cpp
     source/Piece.cpp
     source/SpecialPiece.cpp

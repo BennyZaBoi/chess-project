@@ -7,7 +7,7 @@ class ChessboardDisplay{
     private:
     public:
         ChessboardDisplay(){}
-        ~ChessboardDisplay();
+        ~ChessboardDisplay() = default;
         bool displayTrue(Chessboard* board);
         void displayBoard(Chessboard* board);
 };

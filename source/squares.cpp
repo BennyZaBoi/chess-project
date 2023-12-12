@@ -33,6 +33,7 @@ Piece* Squares::pickUpPiece(){
         piece = nullptr; 
         return pickedUpPiece; 
     }
+    return nullptr;
 } 
 
 void Squares::removePiece(){

@@ -6,7 +6,7 @@ Authors: Hien Bui (https://github.com/hbgithubucr), Luis Barrios (https://github
 * This chess game project is important and interesting to us since it allows us to apply various design patterns and chess solution algorithms that we had never worked with before. Additionally it will give us the chance to learn how to implement the feature of saving and loading a game as well as apply many of the techniques we have learned in this class.
 * For this chess game project, we plan to use C++ as our primary coding language, as it is the coding language that each member of the group is most comfortable with and condifent in.
 * The chess game will take input from the user through the terminal. The program will take in the coordinates of a chess piece and the coordinates for where to move it. If it is not a valid spot for the chess piece to move, the user will have to keep putting in coordinates until they choose a valid position. The program will then output the current state of the chess board and pieces in the terminal using various characters.
-* The features of our chess game will be allowing for two users to play the classsic game of chess against each other, allowing users to undo their moves, and give them the ability to save, load, and continue their incomplete games.
+* The features of our chess game will be allowing for two users to play the classic game of chess (with some minor changes to check/checkmate) against each other, as well as displaying the current state of the chessboard to users.
 
 ## User Interface Specification
 

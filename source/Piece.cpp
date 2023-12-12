@@ -1,16 +1,15 @@
 #include "../header/Piece.h"
 #include "../header/chessboard.h"
 #include "../header/squares.h"
-#include <stdexcept>
+//#define NDEBUG
+#include <assert.h>
 
 Piece::Piece(Color _color, Type _type, int _row, int _column){
     color = _color;
     type = _type;
     row = _row;
     column = _column;
-    if (row < 0 || row > 7 || column < 0 || column > 7) {
-        throw std::invalid_argument("piece isnt on board");
-    }
+    assert(row >= 0 && row <= 7 && column >= 0 && column <= 7 && "Error: Invalid Inputs For Piece");
 }
 
 Color Piece::getColor() const{

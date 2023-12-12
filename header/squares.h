@@ -1,13 +1,15 @@
-#pragma once 
+#ifndef SQUARE_H
+#define SQUARE_H
 
 #include "Piece.h"
-#include <stdexcept>
+//#define NDEBUG
+#include <assert.h>
 
 class Squares {
-    private: 
-        int row; 
-        int column; 
-        Piece* piece; 
+    private:
+        int row;
+        int column;
+        Piece* piece;
     public:
         Squares()
             :row(-1),
@@ -16,15 +18,15 @@ class Squares {
             {
             }
 
+
         Squares(int row, int column, Piece* piece)
             :row(row),
-             column(column), 
+             column(column),
              piece(piece)
             {
-                if (row < 0 || row > 7 || column < 0 || column > 7){
-                    throw std::invalid_argument("piece isnt on board"); 
-                }
+                assert(row >= 0 && row <= 7 && column >= 0 && column <= 7 && "Error: Invalid Inputs For Square");
             }
+
 
         ~Squares();
         int getRow() const; 
@@ -35,3 +37,5 @@ class Squares {
         void removePiece(); 
         bool isOccupied() const; 
 };
+
+#endif

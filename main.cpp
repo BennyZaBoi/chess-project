@@ -34,7 +34,7 @@ int main() {
             string p1Color;
 
             cout << "Enter Player 1 name:" << endl;
-            cin >> p1Name;
+            getline(cin >> ws, p1Name);
             p1.setName(p1Name);
             cout << "Enter Player 1 color:" << endl;
             cout << "You can choose from: \033[30m black, \033[31m red, \033[32m green, \033[33m yellow, \033[34m blue, \033[35m magenta, \033[36m cyan, \033[37m white" << endl;
@@ -46,7 +46,7 @@ int main() {
             string p2Color;
             
             cout << "Enter Player 2 name:" << endl;
-            cin >> p2Name;
+            getline(cin >> ws, p2Name);
             p2.setName(p2Name);
             cout << "Enter Player 2 color:" << endl;
             cout << "You can choose from: \033[30m black, \033[31m red, \033[32m green, \033[33m yellow, \033[34m blue, \033[35m magenta, \033[36m cyan, \033[37m white" << endl;
@@ -59,6 +59,7 @@ int main() {
             ChessboardDisplay* showChess = new ChessboardDisplay();
             showChess->displayBoard(newBoard);
             playGame(p1, p2, newBoard);
+            showChess->displayBoard(newBoard);
         }
         else if (choices == 2) {
             printInstructions();

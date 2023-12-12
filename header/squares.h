@@ -21,9 +21,6 @@ class Squares {
              column(column), 
              piece(piece)
             {
-                if (row < 0 || row > 7 || column < 0 || column > 7){
-                    throw std::invalid_argument("piece isnt on board"); 
-                }
             }
 
         ~Squares();

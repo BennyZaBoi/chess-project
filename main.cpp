@@ -22,6 +22,8 @@ using namespace std;
 
 int main() {
     int choices;
+    Chessboard* newBoard = nullptr;
+    ChessboardDisplay* showChess = nullptr;
     do {
         printWelcomeScreen();
 
@@ -52,11 +54,16 @@ int main() {
             cout << "You can choose from: \033[30m black, \033[31m red, \033[32m green, \033[33m yellow, \033[34m blue, \033[35m magenta, \033[36m cyan, \033[37m white" << endl;
             cin >> p2Color;
             p2.setColorChoice(customizeScreen(p2Color));
+            while (p1.returnColorChoice() == p2.returnColorChoice()){
+                cout << "You have chosen the same color as p1. Please select a different color" << endl;
+                cin >> p2Color;
+                p2.setColorChoice(customizeScreen(p2Color));
+            }
             p2.setFirstMove(false);
 
-            Chessboard* newBoard = new Chessboard();
+            newBoard = new Chessboard();
             newBoard->initializeChessboard(p1.returnColorChoice(), p2.returnColorChoice()); 
-            ChessboardDisplay* showChess = new ChessboardDisplay();
+            showChess = new ChessboardDisplay();
             showChess->displayBoard(newBoard);
             playGame(p1, p2, newBoard, showChess);
         }
@@ -77,7 +84,13 @@ int main() {
         else {
             cout << "Invalid Choice choose again..." << endl;
         }
+        cin.clear();
+        cin.ignore(1000000, '\n');
     } while (choices < 1 || choices > 3);
+    delete newBoard;
+    newBoard = nullptr;
+    delete showChess;
+    showChess = nullptr;
 
     return 0;
 }

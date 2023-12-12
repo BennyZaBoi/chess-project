@@ -2,8 +2,8 @@
 #include "../header/King.h"
 
 TEST(pieceConstructorTests, invalidInitialRowCol){
-    EXPECT_ANY_THROW(King* myKing1 = new King(black, -1, -1));
-    EXPECT_ANY_THROW(King* myKing2 = new King(black, 8, 8));
+    EXPECT_DEBUG_DEATH(King* myKing1 = new King(black, -1, -1), "Error: Invalid Inputs For Piece");
+    EXPECT_DEBUG_DEATH(King* myKing2 = new King(black, 8, 8), "Error: Invalid Inputs For Piece");
 }
 
 TEST(pieceConstructorTests, validInitialRowCol){

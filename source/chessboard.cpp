@@ -23,10 +23,19 @@ Chessboard::Chessboard(){
 
 Chessboard::~Chessboard(){
     for (int i = 0; i < 8; ++i){
+        for (int j = 0; j < 8; ++j){
+            if (board[i][j] != nullptr){
+                delete board[i][j];
+            }
+            board[i][j] = nullptr;
+        }
         delete[] board[i];
-    }   
-    delete[] board; 
+        board[i] = nullptr;
+    }  
+    delete[] board;
+    board= nullptr;
 }
+
 
 void Chessboard::initializeChessboard(Color playerOneColor, Color playerTwoColor){
     board[0][0]->setPiece(new Rook(playerOneColor, 0, 0));

@@ -14,13 +14,13 @@ TEST(SquareTests, NonDefaultConstructor){
 TEST (SquareTests, InvalidArgumentConstructor){
     //Already a Check for Knight Tests. Just needed to check specifically for square.
     Knight* newPiece = new Knight (black, 5, 7);
-    EXPECT_ANY_THROW(Squares* newSquare = new Squares(5, 8, newPiece));
+    EXPECT_DEBUG_DEATH(Squares* newSquare = new Squares(5, 8, newPiece), "Error: Invalid Inputs For Square");
 }
 
 TEST (SquareTests, NegArgumentConstructor){
     //Already a Check for Knight Tests. Just needed to check specifically for square.
     Knight* newPiece = new Knight (black, 5, 7);
-    EXPECT_ANY_THROW(Squares* newSquare = new Squares(-1, 7, newPiece));
+    EXPECT_DEBUG_DEATH(Squares* newSquare = new Squares(-1, 7, newPiece), "Error: Invalid Inputs For Square");
 }
 
 TEST (SquareTests, getColumn){

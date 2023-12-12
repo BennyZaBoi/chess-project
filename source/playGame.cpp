@@ -14,6 +14,11 @@ void playGame(Player player1, Player player2, Chessboard *&board, ChessboardDisp
     int i = 0;
     cout << playerList.at(i).returnName() << " goes first" << endl << endl;
     bool gameState = false;
+    Piece *currentPiece = nullptr;
+    Squares *newMovePosition = nullptr;
+    Squares *currentSquare = nullptr;
+    SpecialPiece *specialPiece = nullptr;
+    string pieceType;
     while (!gameState) {
         cout << "It is currently " << playerList.at(i).returnName() << "'s turn to move" << endl;
         cout << "**********************************************************************" << endl << endl;
@@ -28,7 +33,7 @@ void playGame(Player player1, Player player2, Chessboard *&board, ChessboardDisp
         if(startRow < 0 || startRow > 7 || startColumn < 0 || startColumn > 7) {
             makeBetween0And7(startRow, startColumn);
         }
-        Squares *currentSquare = board->getSquare(startRow, startColumn);
+        currentSquare = board->getSquare(startRow, startColumn);
         //if statmenet makes sure that u pick a square with a piece on it
         if (!currentSquare->isOccupied()) {
             makeSelectOccupied(board, currentSquare, startRow, startColumn);
@@ -54,19 +59,25 @@ void playGame(Player player1, Player player2, Chessboard *&board, ChessboardDisp
             makeValidMove(playerList.at(i), currentSquare, endRow, endColumn, startRow, startColumn, board);
         }
 
-        string pieceType;
         outputPieceMoved(currentSquare, pieceType, endRow, endColumn); //outputs what piece moved where
         //moving the pieces
 
-        Piece *currentPiece = currentSquare->pickUpPiece();
-        Squares *newMovePosition = board->getSquare(endRow, endColumn);
+        currentPiece = currentSquare->pickUpPiece();
+        newMovePosition = board->getSquare(endRow, endColumn);
         if (!currentPiece->attackingAlly(endRow, endColumn, board)) {
-            Squares *attackingSquare = board->getSquare(endRow, endColumn);
             newMovePosition->removePiece();
         }
         newMovePosition->setPiece(currentPiece);
+        if (currentPiece->getType() == Pn || currentPiece->getType() == Kg || currentPiece->getType() == Rk){
+            specialPiece = dynamic_cast<SpecialPiece*>(currentPiece);
+            specialPiece->setMoved();
+            specialPiece = nullptr;
+        }
         showChess->displayBoard(board);
         gameState = isKingCaptured(board, playerList);
+        currentPiece = nullptr;
+        newMovePosition = nullptr;
+        currentSquare = nullptr;
         if (i == 0) {
             i++;
         }
@@ -112,10 +123,10 @@ void chooseSameColor(Chessboard *board, Squares *&currentSquare, Player player, 
         cout << "Column: " << endl;
         int startColumn;
         cin >> startColumn;
+        currentSquare = board->getSquare(startRow, startColumn);
         if (!currentSquare->isOccupied()) {
             makeSelectOccupied(board, currentSquare, startRow, startColumn);            
-        }
-        currentSquare = board->getSquare(startRow, startColumn);        
+        } 
     }
 }
 

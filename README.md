@@ -4,15 +4,15 @@ Author: Ben Pham (https://github.com/BennyZaBoi)
 
 ## Project Description
 * This chess game project is important and interesting to us since it allows us to apply various design patterns and chess solution algorithms that we had never worked with before. Additionally it will give us the chance to learn how to implement the feature of saving and loading a game as well as apply many of the techniques we have learned in this class.
-* For this chess game project, I plan to use C++ as our primary coding language, as it is the coding language that each member of the group is most comfortable with and condifent in.
+* For this chess game project, I plan to use C++ as my primary coding language, as it is the coding language that each member of the group is most comfortable with and condifent in.
 * The chess game will take input from the user through the terminal. The program will take in the coordinates of a chess piece and the coordinates for where to move it. If it is not a valid spot for the chess piece to move, the user will have to keep putting in coordinates until they choose a valid position. The program will then output the current state of the chess board and pieces in the terminal using various characters.
-* The features of our chess game will be allowing for two users to play the classic game of chess (with some minor changes to check/checkmate) against each other, as well as displaying the current state of the chessboard to users.
+* The features of my chess game will be allowing for two users to play the classic game of chess (with some minor changes to check/checkmate) against each other, as well as displaying the current state of the chessboard to users.
 
 ## User Interface Specification
 
 ### Navigation Diagram
 ![NavDiaFinal](https://github.com/cs100/final-project-hbui045-lbarr076-azhan061-mpham115/assets/130001003/785aacbf-4c11-4ee1-a7f9-2bbfeb07b8c0)
-This diagram is an overview of the changes and updates that can occur within our terminal-based chess game. The three main screens for this project are the welcome screen, the "print the board" screen, and the winning screen. The welcome screen will provide us with two options, either to start the game as is, or to "get help" understanding how to play chess. To perform either action, you will need to press a key, which will be displayed on the terminal. When the board is printed, all the pieces will show where they initially stand, and thus the game of chess will officially begin. I am, at the moment, simply making it so that in order to win, you must take the king. Once that is done, then the winning screen will pop up, indicating which of the players had won, based on which color they are. 
+This diagram is an overview of the changes and updates that can occur within my terminal-based chess game. The three main screens for this project are the welcome screen, the "print the board" screen, and the winning screen. The welcome screen will provide us with two options, either to start the game as is, or to "get help" understanding how to play chess. To perform either action, you will need to press a key, which will be displayed on the terminal. When the board is printed, all the pieces will show where they initially stand, and thus the game of chess will officially begin. I am, at the moment, simply making it so that in order to win, you must take the king. Once that is done, then the winning screen will pop up, indicating which of the players had won, based on which color they are. 
 
 ### Screen Layouts
 The whole entire project I have outlined will, for now, be terminal-based. The three main screens for this project are the welcome screen, the "print the board" screen, and the winning screen. For now, the help screen is extra. Asking the user for a move and updating the chessboard aren't necessarily screens, but actions that will be performed as the game progresses. 
@@ -99,4 +99,4 @@ Update 3
  7. Have fun
     
  ## Testing
- The way our project was tested/validated was that through the use of googletest. Before I merged any opened pull requests, I made sure that the tests for their specific parts that were changed all passed. After merging, I pulled the updated  master branch and ran   all the tests again to make sure that all the tests for the project still passed.
+ The way my project was tested/validated was that through the use of googletest. Before I merged any opened pull requests, I made sure that the tests for their specific parts that were changed all passed. After merging, I pulled the updated  master branch and ran   all the tests again to make sure that all the tests for the project still passed.
